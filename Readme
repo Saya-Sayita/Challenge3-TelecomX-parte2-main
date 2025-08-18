@@ -1,0 +1,93 @@
+# 📊 **Challenge 3 - Telecom X parte II - Predicción de Cancelación (Churn)
+
+## 🎯 Misión del Proyecto
+
+Desarrollar modelos predictivos que identifiquen clientes con mayor probabilidad de cancelar sus servicios, permitiendo a la empresa anticiparse a la pérdida de clientes. Se construye un pipeline completo y robusto para esta etapa inicial de modelado.
+
+## 📝 Objetivos del Desafío
+
+* Preparar y limpiar los datos para el modelado (tratamiento, codificación, normalización)
+* Analizar correlaciones y seleccionar variables clave
+* Entrenar y comparar dos o más modelos de clasificación
+* Evaluar el rendimiento de los modelos mediante métricas clave (Exactitud, Precisión, Recall, F1-score, Matriz de Confusión)
+* Interpretar los resultados, incluyendo la importancia de cada variable
+* Generar conclusiones estratégicas destacando los factores principales que influyen en la cancelación
+
+## 🛠 Herramientas y Tecnologías
+
+* **Plataforma:** Google Colab
+* **Lenguaje de Programación:** Python
+* **Librerías utilizadas:**
+
+  * `pandas` para manejo y preparación de datos
+  * `numpy` para operaciones numéricas
+  * `matplotlib` para visualización de datos
+  * `seaborn` para gráficos estadísticos
+  * `scikit-learn` para preprocesamiento, modelado y evaluación (SMOTE, regresión logística, Random Forest, métricas de desempeño)
+
+## 📂 Contenido del Proyecto
+
+1. **Preparación de Datos**
+
+   * Eliminación de columnas irrelevantes
+   * Definición del target binario (`Churn`)
+   * Análisis de proporción de clases
+
+2. **Codificación de Variables Categóricas**
+
+   * Transformación de variables categóricas mediante `get_dummies`
+   * Tratamiento de servicios de internet
+
+3. **Exploración y Visualización**
+
+   * Heatmap de correlaciones
+   * Boxplots y resúmenes estadísticos por Churn
+   * Identificación de variables clave
+
+4. **Balanceo y Normalización**
+
+   * Uso de SMOTE para balancear clases
+   * Normalización y estandarización de variables numéricas
+
+5. **Modelado Predictivo**
+
+   * Regresión Logística (requiere variables escaladas; se aplicó normalización o estandarización y se entrenó sobre estos mismos datos para mantener consistencia)
+   * Random Forest (no requiere escalado)
+
+6. **Evaluación de Modelos**
+
+   * Exactitud, Precisión, Recall, F1-score
+   * Matrices de confusión
+   * Comparación de desempeño entre modelos
+
+7. **Interpretación de Resultados**
+
+   * Importancia de variables (Random Forest)
+   * Coeficientes absolutos (Regresión Logística)
+   * Insights sobre patrones de churn
+
+8. **Conclusiones y Recomendaciones**
+
+   * Perfil de clientes con mayor riesgo de churn
+   * Estrategias de retención sugeridas
+   * Selección del modelo más adecuado según objetivos de negocio
+
+## 🔑 Insights Clave
+
+* Tenure y cargos (mensuales y totales) son los principales predictores de churn
+* Clientes nuevos o con menor permanencia tienen mayor probabilidad de abandonar
+* Tipos de contratos y servicios de internet afectan el riesgo de churn
+* Métodos de pago electrónicos y paperless billing son indicadores útiles para segmentación
+
+## 🚀 Uso del Proyecto
+
+1. Abrir el notebook en **Google Colab**
+2. Cargar el dataset proporcionado
+3. Ejecutar las celdas en orden para reproducir el análisis completo
+4. Revisar los resultados y visualizaciones para identificar clientes en riesgo y variables clave
+
+## 🔄 Reproducibilidad
+
+* Todas las transformaciones, balanceos y normalizaciones son reproducibles
+* Los modelos y resultados se basan en datos reales y pueden actualizarse con nuevas observaciones
+
